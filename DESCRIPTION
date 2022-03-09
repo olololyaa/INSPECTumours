@@ -1,0 +1,47 @@
+Package: INSPECTumours
+Title: IN-vivo reSPonsE Classification of Tumours
+Version: 0.0.0.9000
+Authors@R: c(
+    person(given = "Bairu", family = "Zhang", email = "bairu.zhang@astrazeneca.com", role = c("cre", "aut")),
+    person(given = "Olga", family = "Muraeva", email = "olga.muraeva@astrazeneca.com", role = c("aut")),
+    person(given = "Natasha", family = "Karp", email = "natasha.karp@astrazeneca.com", role = c("aut"))
+  )
+Maintainer: Bairu Zhang <bairu.zhang@astrazeneca.com>
+Description: This is a statistical tool used for classifying and analysing
+    pre-clinical tumour responses.
+License: Apache License (== 2)
+Depends: 
+    R (>= 3.5.0)
+Imports: 
+    brms,
+    dplyr,
+    DT,
+    ggeffects,
+    ggplot2,
+    knitr,
+    lme4,
+    modelr,
+    pander,
+    plotly,
+    purrr,
+    readxl,
+    rlang,
+    rmarkdown,
+    shiny,
+    shinyalert,
+    shinyFeedback,
+    shinyjs,
+    shinytoastr,
+    shinyvalidate,
+    tidybayes,
+    tippy,
+    tidyr,
+    vroom,
+    waiter
+Suggests: 
+    lintr,
+    testthat 
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2

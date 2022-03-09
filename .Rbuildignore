@@ -1,0 +1,10 @@
+^\.Rproj\.user$
+^.*\.Rproj$
+^app\.R$
+^rsconnect$
+^LICENSE\.md$
+^README\.md$
+^dev$
+^tests/testthat/test-lint\.R
+^AUTHORS\.md$
+^CONTRIBUTING\.md$
