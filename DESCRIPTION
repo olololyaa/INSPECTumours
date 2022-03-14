@@ -1,6 +1,6 @@
 Package: INSPECTumours
 Title: IN-vivo reSPonsE Classification of Tumours
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: c(
     person(given = "Bairu", family = "Zhang", email = "bairu.zhang@astrazeneca.com", role = c("cre", "aut")),
     person(given = "Olga", family = "Muraeva", email = "olga.muraeva@astrazeneca.com", role = c("aut")),

@@ -1,3 +1,7 @@
+# INSPECTumours 0.1.0
+
+Incremented the version
+
 INSPECTumours (development version)
 =================================================================================
 
