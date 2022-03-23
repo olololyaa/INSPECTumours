@@ -20,4 +20,4 @@ devtools::build()
 # https://cran.r-project.org/submit.html
 
 # install from local tar.gz:
-devtools::install_local("INSPECTumours_0.0.0.9000.tar.gz")
+devtools::install_local("INSPECTumours_0.1.0.tar.gz")

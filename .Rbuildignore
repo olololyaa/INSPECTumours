@@ -8,3 +8,4 @@
 ^tests/testthat/test-lint\.R
 ^AUTHORS\.md$
 ^CONTRIBUTING\.md$
+^cran-comments\.md$
