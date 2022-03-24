@@ -12,6 +12,7 @@ rhub::check()
 
 # Create/update cran comments.md
 # create - usethis::use_cran_comments()
+# check -
 
 # make a package bundle
 devtools::build()

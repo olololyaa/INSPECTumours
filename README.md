@@ -69,3 +69,13 @@ run_app()
 ```r
 devtools::test()
 ```
+## Run github check for package 
+
+```r
+usethis::use_github_action_check_standard()
+```
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/AstraZeneca/INSPECTumours/workflows/R-CMD-check/badge.svg)](https://github.com/AstraZeneca/INSPECTumours/actions)
+<!-- badges: end -->
+
