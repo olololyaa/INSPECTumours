@@ -11,8 +11,8 @@ devtools::check_win_devel()
 rhub::check()
 
 # Create/update cran comments.md
-# create - usethis::use_cran_comments()
-# check -
+usethis::use_cran_comments()
+
 
 # make a package bundle
 devtools::build()

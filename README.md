@@ -1,6 +1,11 @@
 
 ![Maturity level-0](https://img.shields.io/badge/Maturity%20Level-ML--0-red)
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/AstraZeneca/INSPECTumours/workflows/R-CMD-check/badge.svg)](https://github.com/AstraZeneca/INSPECTumours/actions)
+<!-- badges: end -->
+
+
 IN-vivo reSPonsE Classification of Tumours (INSPECTumours)
 =================================================================================
 
@@ -75,7 +80,5 @@ devtools::test()
 usethis::use_github_action_check_standard()
 ```
 
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/AstraZeneca/INSPECTumours/workflows/R-CMD-check/badge.svg)](https://github.com/AstraZeneca/INSPECTumours/actions)
-<!-- badges: end -->
+
 
