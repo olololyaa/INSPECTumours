@@ -8,4 +8,4 @@ INSPECTumours::run_app()
 # 3. Check all dependencies  (@export to functions, import functions from other packages), use usethis::use_package() to change DESCRIPTION
 
 # 4. Run in the package directory:
-rsconnect::deployApp()
+rsconnect::deployApp(appName = "INSPECT")
