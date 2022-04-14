@@ -7,7 +7,7 @@ Authors@R: c(
     person(given = "Natasha", family = "Karp", email = "natasha.karp@astrazeneca.com", role = c("aut"))
   )
 Maintainer: Bairu Zhang <bairu.zhang@astrazeneca.com>
-Description: This is a statistical tool used for classifying and analysing
+Description: This is a shiny app used for the statistical classifying and analysing
     pre-clinical tumour responses.
 License: Apache License (== 2)
 Depends: 
