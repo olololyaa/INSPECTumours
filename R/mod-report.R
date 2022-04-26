@@ -59,6 +59,7 @@ mod_report_server <- function(id, r) {
         # case we don't have write permissions to the current working dir (which
         # can happen when deployed).
         old_dir <- getwd()
+        on.exit(setwd(old_dir))
         tmp_dir <- tempdir()
         setwd(tmp_dir)
 
@@ -66,7 +67,7 @@ mod_report_server <- function(id, r) {
         w$show()
 
         on.exit({
-          setwd(old_dir)
+          # setwd(old_dir)
           w$hide()
         })
 
