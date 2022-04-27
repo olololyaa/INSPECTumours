@@ -67,7 +67,6 @@ mod_report_server <- function(id, r) {
         w$show()
 
         on.exit({
-          # setwd(old_dir)
           w$hide()
         })
 
