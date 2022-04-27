@@ -9,6 +9,9 @@ run_app(...)
 \arguments{
 \item{...}{additional options passed to shinyApp()}
 }
+\value{
+No return value, called for the shiny app interface
+}
 \description{
 Run the Shiny Application
 }
