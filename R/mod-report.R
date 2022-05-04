@@ -55,20 +55,18 @@ mod_report_server <- function(id, r) {
                ".zip")
       },
       content = function(file) {
-        # Copy the report file to a temporary directory before processing it, in
+        # Use a temporary directory for report files, in
         # case we don't have write permissions to the current working dir (which
         # can happen when deployed).
         old_dir <- getwd()
-        on.exit(setwd(old_dir))
+        on.exit(setwd(old_dir), add = TRUE)
+
         tmp_dir <- tempdir()
         setwd(tmp_dir)
 
         # show loading spinner
         w$show()
-
-        on.exit({
-          w$hide()
-        })
+        on.exit(w$hide(), add = TRUE)
 
         tryCatch({
 
