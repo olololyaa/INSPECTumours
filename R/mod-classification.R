@@ -83,7 +83,10 @@ mod_classification_ui <- function(id) {
                  ))),
 
         tabPanel("Waterfall plot",
-                 uiOutput(ns("waterfall")))
+                 uiOutput(ns("waterfall")),
+                 DTOutput(ns(
+                   "waterfall_table"
+                 )))
 
       )
     )
@@ -278,6 +281,7 @@ mod_classification_server <- function(id, r) {
             .data$classification
           )
 
+        r$dat_waterfall <- dat_waterfall
 
         r$classification_waterfall_plot <-
           lapply(unique(dat_waterfall$study), function(i) {
@@ -365,6 +369,24 @@ mod_classification_server <- function(id, r) {
         plotOutput(ns(paste0("waterfall_plot",  .y)))
       })
     })
+
+
+    output$waterfall_table <- renderDT({
+      req(r$dat_waterfall)
+      r$dat_waterfall %>%
+        mutate_if(is.numeric, ~ round(., 4)) %>%
+        datatable(
+          extensions = "Buttons",
+          options = list(
+            dom = "Blfrtip",
+            buttons = list(
+              list(extend = "csv", filename = "Data_waterfall"),
+              list(extend = "excel", filename = "Data_waterfall")
+            ),
+            text = "Download"
+          )
+        )
+    }, server = FALSE)
 
   })
 }
