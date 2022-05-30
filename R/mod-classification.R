@@ -109,7 +109,7 @@ mod_classification_ui <- function(id) {
 #' @importFrom shinyjs toggleState
 #' @importFrom shinyvalidate InputValidator sv_required
 #' @importFrom purrr imap map
-#' @importFrom dplyr group_map desc
+#' @importFrom dplyr group_map desc select
 #' @importFrom stats pt
 #' @importFrom rlang .data
 #' @importFrom plotly ggplotly renderPlotly layout
@@ -281,7 +281,15 @@ mod_classification_server <- function(id, r) {
             .data$classification
           )
 
-        r$dat_waterfall <- dat_waterfall
+        r$dat_waterfall <- dat_waterfall %>%
+          select(.data$study,
+                 .data$animal_id,
+                 .data$treatment,
+                 .data$gr,
+                 .data$gr_se,
+                 .data$classification,
+                 .data$mean_control,
+                 .data$percent_change_from_control_mean)
 
         r$classification_waterfall_plot <-
           lapply(unique(dat_waterfall$study), function(i) {
