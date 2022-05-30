@@ -24,7 +24,7 @@ classification_colors <- setNames(
     color_az[["Purple"]],
     color_az[["Gold"]],
     color_az[["LightBlue"]],
-    color_az[["LimeGreen"]]
+    color_az[["Magenta"]]
     ),
   c(
     "Not reliable",
