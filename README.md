@@ -53,6 +53,20 @@ In order to use this package, please follow the instruction below.
 install.packages("INSPECTumours")
 ```
 
+
+## R 4.2 on Windows
+The Rstan is a dependancy of the brms package that is used to build models in the app.
+
+[The current CRAN Rstan (version 2.21.5) does not work with R 4.2 on Windows.](https://blog.mc-stan.org/2022/04/26/stan-r-4-2-on-windows/)
+
+You need to install rstan and StanHeaders packages from the Stan R package repository.
+```r
+# if you have installed packages from CRAN
+remove.packages(c("rstan", "StanHeaders"))
+
+install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+```
+
 ## Install from github (development version)
 
 ```r

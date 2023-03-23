@@ -9,6 +9,8 @@ Authors@R: c(
 Maintainer: Bairu Zhang <bairu.zhang@astrazeneca.com>
 Description: This is a shiny app used for the statistical classifying and analysing
     pre-clinical tumour responses.
+URL: https://github.com/AstraZeneca/INSPECTumours
+BugReports: https://github.com/AstraZeneca/INSPECTumours/issues
 License: Apache License (== 2)
 Depends: 
     R (>= 3.5.0)
