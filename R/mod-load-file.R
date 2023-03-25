@@ -56,23 +56,25 @@ mod_load_file_server <- function(id, r) {
       check_case(NULL)
       check_control(NULL)
 
+      df_raw <- NULL
+
       tryCatch({
-        df <- load_data(file$datapath, file$name)
+        df_raw <- load_data(file$datapath, file$name)
       },
       error = function(e) {
         print(e)
         shinyalert("Error loading data", type = "error")
       })
 
-      req(df)
+      req(df_raw)
 
-      missing_values <- any(is.na(df))
+      missing_values <- any(is.na(df_raw))
       if (missing_values) {
         notify_error_and_reset_input("Some values are missing")
       }
 
       n_crit_cols <- length(crit_cols)
-      if (ncol(df) < n_crit_cols) {
+      if (ncol(df_raw) < n_crit_cols) {
         notify_error_and_reset_input(
           paste(
             "There are",
@@ -83,9 +85,9 @@ mod_load_file_server <- function(id, r) {
 
       }
 
-      if (!missing_values & ncol(df) >= n_crit_cols) {
-        df$file_name <- rep(file$name, nrow(df))
-        loaded_data(df)
+      if (!missing_values & ncol(df_raw) >= n_crit_cols) {
+        df_raw$file_name <- rep(file$name, nrow(df_raw))
+        loaded_data(df_raw)
         check_ncols(TRUE)
       }
 

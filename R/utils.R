@@ -45,7 +45,7 @@ load_data <- function(path, name) {
   df <- switch(ext,
                csv = vroom(path, delim = ","),
                xlsx = read_excel(path),
-               validate("Invalid file; Please upload a .csv or .xlsx file"))
+               stop("Invalid file; Please upload a .csv or .xlsx file"))
   return(as.data.frame(df))
 }
 
@@ -253,7 +253,7 @@ set_waiter <- function(header) {
 
 #' Display a popup message and reset fileInput
 #' @param message_text the modal's text
-#' @importFrom shinyalert useShinyalert
+#' @importFrom shinyalert shinyalert
 #' @importFrom shinyjs reset
 notify_error_and_reset_input <- function(message_text) {
   shinyalert(paste(message_text),
