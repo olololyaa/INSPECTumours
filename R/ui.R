@@ -1,7 +1,8 @@
-#' @importFrom  shiny tagList tags navbarPage div img tabPanel includeMarkdown
-#' withMathJax navbarMenu
+#' @importFrom  shiny tagList tags navbarPage div img tabPanel
+#' withMathJax navbarMenu HTML
 #' @importFrom knitr knit
 #' @importFrom waiter autoWaiter
+#' @importFrom markdown mark
 ui <- function() {
   tagList(
     tags$link(rel = "stylesheet", type = "text/css", href = "www/style.css"),
@@ -31,11 +32,13 @@ ui <- function() {
       tabPanel("Report",
                mod_report_ui("report")),
       tabPanel("Info",
-               withMathJax(includeMarkdown(
-                 system.file("info.md", package = "INSPECTumours")
-               )))
+               withMathJax(HTML(markdown::mark(
+                 system.file("info.md", package = "INSPECTumours"),
+                 output = NULL
+               ))))
 
     )
+
 
   )
 }
