@@ -12,8 +12,7 @@ mod_load_ui <- function(id) {
 
   ns <- NS(id)
 
-  tagList(useShinyalert(),
-          useShinyFeedback(),
+  tagList(useShinyFeedback(),
           useToastr(),
           sidebarLayout(
             sidebarPanel(

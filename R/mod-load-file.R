@@ -10,8 +10,7 @@
 #' @importFrom purrr map
 mod_load_file_ui <- function(id, name) {
   ns <- NS(id)
-  tagList(useShinyalert(),
-          useShinyjs(),
+  tagList(useShinyjs(),
           fileInput(ns("file"), name, accept = c(".csv", ".xlsx")))
 }
 
